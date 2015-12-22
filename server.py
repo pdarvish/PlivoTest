@@ -17,7 +17,7 @@ def dial_id():
     d = r.addDial(**params)
     d.addNumber(to_number)
     print r.to_xml()
-    return Response(str(r), mimetype='text/xml')
+    return make_response(str(r), mimetype='text/xml')
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
